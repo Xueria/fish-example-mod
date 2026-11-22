@@ -3,6 +3,7 @@ val modName = providers.gradleProperty("modName").get()
 val modVersion = providers.gradleProperty("modVersion").get()
 
 plugins {
+    alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.fish.loom)
     alias(libs.plugins.setup.mite)
 }
@@ -27,6 +28,8 @@ dependencies {
 
     // Add fish mod loader dependency
     "loader"("com.github.MinecraftIsTooEasy:FishModLoader:3.4.2")
+
+    implementation("io.github.xueria:fabric-language-kotlin:1.14.1+kotlin.2.4.20")
 }
 
 loom {

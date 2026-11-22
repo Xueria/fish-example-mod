@@ -8,12 +8,16 @@
     "Xueria"
   ],
   "depends": {
-    "fishmodloader": ">=3.4.2"
+    "fishmodloader": ">=3.4.2",
+    "fabric-language-kotlin": ">=1.14.1+kotlin.2.4.20"
   },
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.example.ExampleMod"
+      {
+        "adapter": "kotlin",
+        "value": "org.example.ExampleMod"
+      }
     ]
   },
   "mixins": [
